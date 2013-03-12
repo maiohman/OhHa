@@ -1,0 +1,10 @@
+Aihe: Laivanupotus
+Toteutetaan peli, jossa kone arpoo laivoijen paikat ja käyttäjä etsii niitä koordinaateilla.
+
+Käyttäjät: Pelaaja
+
+Pelaajan toiminnot:
+
+    arvaus
+        onnistuu jos samaa arvausta ei ole jo suoritettu
+
