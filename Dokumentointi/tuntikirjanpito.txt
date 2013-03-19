@@ -25,6 +25,6 @@ Luokkakaavion tekoa, skannus.
 
 
 19.3
-14:45- 
+14:45-16:55
 Pajassa. Kertailin. Onnistuin lisäämään Dokumentointi kansion ja poistamaan vanhat tuntikirjanpito ja aihemäärittely tiedostot väärästä paikkaa. 
-Aloitin deadline 2 tehtävien tekemisen.
+Aloitin deadline 2 tehtävien tekemisen. Ohjelmointi tuntuu hankalalta pienen tauon jälkeen.
