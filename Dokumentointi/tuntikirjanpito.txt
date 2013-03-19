@@ -1,28 +1,30 @@
 Muoto: txt- tai pdf-tiedosto
-    Pid‰ kirjaa harjoitustyˆhˆn k‰ytt‰m‰st‰si tyˆm‰‰r‰st‰
-    K‰ytt‰m‰si tyˆm‰‰r‰ ei vaikuta arvosanaan, joten ole rehellinen
-    Merkitse aina v‰hint‰‰n p‰iv‰m‰‰r‰, k‰ytt‰m‰si aika ja ajank‰ytˆn kohde
+    Pid√§ kirjaa harjoitusty√∂h√∂n k√§ytt√§m√§st√§si ty√∂m√§√§r√§st√§
+    K√§ytt√§m√§si ty√∂m√§√§r√§ ei vaikuta arvosanaan, joten ole rehellinen
+    Merkitse aina v√§hint√§√§n p√§iv√§m√§√§r√§, k√§ytt√§m√§si aika ja ajank√§yt√∂n kohde
 
 ---------------------------------------------------------------------------
 
 12.3.2013   2h
-Tunnin j‰lkeen j‰in tekem‰‰n viikon viikkoteht‰vi‰. Poistuin paikalta noin klo 16.
+14-16 
+Tunnin j√§lkeen j√§in tekem√§√§n viikon viikkoteht√§vi√§. Poistuin paikalta noin klo 16.
 
 
 17.3
+14-15:45 
+Omalle koneelle java projectin lataus, kertailua, ohjelmointia (luokat Lauivanupotus ja Pala)
 
-14-15:45 Omalle koneelle java projectin lataus, kertailua, ohjelmointia (luokat Lauivanupotus ja Pala)
-
-
-21:50-23:45 Tajuan tehneeni v‰‰rin. En ole jatkanut vanhaa projektia vaan luonut uuden. Yrit‰n asentaa omalle koneelleni GitHubia. Joudun raivaamaan tilaa ohjelmalle. Asensin ohjelmaa...
- Asiat eiv‰t menneet niin kuin ohjeissa.
+21:50-23:45 
+Tajuan tehneeni v√§√§rin. En ole jatkanut vanhaa projektia vaan luonut uuden. Yrit√§n asentaa omalle koneelleni GitHubia. Joudun raivaamaan tilaa ohjelmalle. 
+Asensin ohjelmaa... Asiat eiv√§t menneet niin kuin ohjeissa.
 
 
 18.3
-
-9:30-10:15 Luokkakaavion tekoa, skannus.
+9:30-10:15 
+Luokkakaavion tekoa, skannus.
 
 
 19.3
-
-14:45- Pajassa. Ketailen.
+14:45- 
+Pajassa. Kertailin. Onnistuin lis√§√§m√§√§n Dokumentointi kansion ja poistamaan vanhat tuntikirjanpito ja aihem√§√§rittely tiedostot v√§√§r√§st√§ paikkaa. 
+Aloitin deadline 2 teht√§vien tekemisen.
