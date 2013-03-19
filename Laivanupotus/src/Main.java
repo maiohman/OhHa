@@ -1,3 +1,6 @@
+
+import laivanupous.peli.Laivanupotus;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -13,6 +16,7 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // testausta
+        Laivanupotus laivanupotus = new Laivanupotus(10, 10);
     }
 }
