@@ -1,4 +1,4 @@
-Muoto: txt- tai pdf-tiedosto
+﻿Muoto: txt- tai pdf-tiedosto
     Pidä kirjaa harjoitustyöhön käyttämästäsi työmäärästä
     Käyttämäsi työmäärä ei vaikuta arvosanaan, joten ole rehellinen
     Merkitse aina vähintään päivämäärä, käyttämäsi aika ja ajankäytön kohde
@@ -28,3 +28,7 @@ Luokkakaavion tekoa, skannus.
 14:45-16:55
 Pajassa. Kertailin. Onnistuin lisäämään Dokumentointi kansion ja poistamaan vanhat tuntikirjanpito ja aihemäärittely tiedostot väärästä paikkaa. 
 Aloitin deadline 2 tehtävien tekemisen. Ohjelmointi tuntuu hankalalta pienen tauon jälkeen.
+
+18:15-21:45
+Taistelin git yhteyden saamista omalle koneelle. Git Bashia kun ei ollut oletin että Git Shell on vastaava. Ohjeet ovat rasittavan sekavat. Lopulta kuitenkin onnistuin.
+Mietin kuinka saisin ohjelman toimimaan. Kertailin Testien tekemistä. Testejä oli kuitenkin vaikea tehdä vielä tässä vaiheessa.

@@ -9,5 +9,9 @@ package laivanupotus.domain;
  * @author maiohman
  */
 public class Laiva {
-    
+    int pituus;
+
+    public Laiva(int pituus) {
+        this.pituus = pituus;
+    }
 }
