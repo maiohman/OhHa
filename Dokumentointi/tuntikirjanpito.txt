@@ -1,0 +1,28 @@
+Muoto: txt- tai pdf-tiedosto
+    Pidä kirjaa harjoitustyöhön käyttämästäsi työmäärästä
+    Käyttämäsi työmäärä ei vaikuta arvosanaan, joten ole rehellinen
+    Merkitse aina vähintään päivämäärä, käyttämäsi aika ja ajankäytön kohde
+
+---------------------------------------------------------------------------
+
+12.3.2013   2h
+Tunnin jälkeen jäin tekemään viikon viikkotehtäviä. Poistuin paikalta noin klo 16.
+
+
+17.3
+
+14-15:45 Omalle koneelle java projectin lataus, kertailua, ohjelmointia (luokat Lauivanupotus ja Pala)
+
+
+21:50-23:45 Tajuan tehneeni väärin. En ole jatkanut vanhaa projektia vaan luonut uuden. Yritän asentaa omalle koneelleni GitHubia. Joudun raivaamaan tilaa ohjelmalle. Asensin ohjelmaa...
+ Asiat eivät menneet niin kuin ohjeissa.
+
+
+18.3
+
+9:30-10:15 Luokkakaavion tekoa, skannus.
+
+
+19.3
+
+14:45- Pajassa. Ketailen.
