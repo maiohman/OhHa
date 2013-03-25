@@ -21,7 +21,7 @@ Asensin ohjelmaa... Asiat eivät menneet niin kuin ohjeissa.
 
 18.3
 9:30-10:15 
-Luokkakaavion tekoa, skannus.
+Luokkakaavion tekoa, skannaus.
 
 
 19.3
@@ -30,5 +30,10 @@ Pajassa. Kertailin. Onnistuin lisäämään Dokumentointi kansion ja poistamaan 
 Aloitin deadline 2 tehtävien tekemisen. Ohjelmointi tuntuu hankalalta pienen tauon jälkeen.
 
 18:15-21:45
-Taistelin git yhteyden saamista omalle koneelle. Git Bashia kun ei ollut oletin että Git Shell on vastaava. Ohjeet ovat rasittavan sekavat. Lopulta kuitenkin onnistuin.
+Taistelin git yhteyden saamista omalle koneelle. Git Bashia kun ei ollut, oletin, että Git Shell on vastaava. Ohjeet ovat rasittavan sekavat. Lopulta kuitenkin onnistuin.
 Mietin kuinka saisin ohjelman toimimaan. Kertailin Testien tekemistä. Testejä oli kuitenkin vaikea tehdä vielä tässä vaiheessa.
+
+
+25.3
+10:40-12:00
+Mietin pelin ominaisuuksia. Ohjelmoin lisää.
