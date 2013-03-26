@@ -1,5 +1,9 @@
 
-import laivanupous.peli.Laivanupotus;
+import laivanupotus.domain.Kentta;
+import laivanupotus.domain.Laiva;
+import laivanupotus.domain.Pala;
+import laivanupotus.peli.Pelaaja;
+import laivanupotus.peli.Laivanupotus;
 
 /*
  * To change this template, choose Tools | Templates
@@ -17,6 +21,22 @@ public class Main {
      */
     public static void main(String[] args) {
         // testausta
-        Laivanupotus laivanupotus = new Laivanupotus(10, 10);
+        Pelaaja anna = new Pelaaja("Anna");
+        System.out.println(anna.getNimi());
+        Kentta kentta = new Kentta(10, 10);
+        if (kentta.onkoVapaaPala(5, 6) == true) {
+            System.out.println("Vapaa!");
+        }
+        else {
+            System.out.println("Varattu!");
+        }
+        
+        
+        //Laivanupotus peli = new Laivanupotus(10, 10);
+        //peli.laivanAsetus(2);
+        //peli.laivanAsetus(3);
+        //peli.laivanAsetus(3);
+        //peli.laivanAsetus(4);
+        //peli.laivanAsetus(5);
     }
 }

@@ -5,6 +5,7 @@ package laivanupotus.domain;
  * and open the template in the editor.
  */
 
+import laivanupotus.peli.Pelaaja;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -16,9 +17,9 @@ import static org.junit.Assert.*;
  *
  * @author maiohman
  */
-public class PalaTest {
+public class PalanTilaTest {
     
-    public PalaTest() {
+    public PalanTilaTest() {
     }
     
     @BeforeClass
@@ -40,5 +41,9 @@ public class PalaTest {
     // The methods must be annotated with annotation @Test. For example:
     //
     @Test
-    public void hello() {}
+    public void uudenPalanTila() {
+        Pala x1y1 = new Pala(1, 1);
+        assertTrue(x1y1.getPalanTila() == true);
+    }
+
 }
