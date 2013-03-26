@@ -39,5 +39,11 @@ Mietin kuinka saisin ohjelman toimimaan. Kertailin Testien tekemistä. Testejä 
 Mietin pelin ominaisuuksia. Ohjelmoin lisää.
 
 26.3
+11:50-13:10
+ohjelmointia
+
 15:30-22:00
 Ohjelmointia, testien tekemistä, pohdintaa. Ongelmia GitHubin kanssa. En osaa käyttää add komentoa, enkä siten pysty lisäämään uusia testejä tänne näkyviin.
+
+22:50-22:55
+Sain lisättyä uudet tiedostot tänne nettiin.
