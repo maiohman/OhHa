@@ -1,5 +1,6 @@
 Aihe: Laivanupotus
-Toteutetaan peli, jossa kone arpoo laivoijen paikat ja käyttäjä etsii niitä koordinaateilla.
+Toteutetaan peli, jossa kone arpoo laivoijen paikat ja käyttäjä etsii niitä koordinaateilla. Laivoja on 5: yksi 2 palan kokoinen, kaksi 3 palan, yksi 4 palan ja yksi 5 palan kokoinen. Laivat voivat olla pysty-, vaakasuunnassa tai vinottain.
+Pelin alussa pelaaja pystyy määrittelemään kentän suuruuden. Kentän tulee kuitenkin olla minimissä 6x6.
 
 Käyttäjät: Pelaaja
 
