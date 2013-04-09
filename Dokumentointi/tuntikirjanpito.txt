@@ -71,4 +71,5 @@ Jatkan työskentelyä kannettavalla, jolla on jo yhteys Githubiin.
 Parantelen ohjelmaa, lisään toiminnallisuutta, teen lisää testejä.
 
 20:00-22:00
-Jatkoin työtä, tutustuin JavaDociin.
+Jatkoin työtä, tutustuin JavaDociin. Taas hankaluuksia saada uusi materiaali nettiin. 
+Git add Laivanupotus, git commit -m "viides muokkaus", git push - ei vain toimi tai ei päivity samantien.
