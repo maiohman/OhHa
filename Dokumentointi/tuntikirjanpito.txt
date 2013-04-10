@@ -77,3 +77,5 @@ Git add Laivanupotus, git commit -m "viides muokkaus", git push - ei vain toimi 
 22:15-23:00
 Ei edes git add . auta eikä git commit -a -m "uusi yritys". Tänne pystyy sentään suoraan editoimaan.
 
+Likki työhöni Google Drive:iin: 
+https://drive.google.com/folderview?id=0B2rULRtiMiQ9TVZHWF93MFBabkk&usp=sharing
