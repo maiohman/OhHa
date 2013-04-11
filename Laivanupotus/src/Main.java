@@ -21,22 +21,9 @@ public class Main {
      */
     public static void main(String[] args) {
         // testausta
-        Pelaaja anna = new Pelaaja("Anna");
-        System.out.println(anna.getNimi());
-        Kentta kentta = new Kentta(10, 10);
-        if (kentta.onkoVapaaPala(5, 6) == true) {
-            System.out.println("Vapaa!");
-        }
-        else {
-            System.out.println("Varattu!");
-        }
         
-        
-        //Laivanupotus peli = new Laivanupotus(10, 10);
-        //peli.laivanAsetus(2);
-        //peli.laivanAsetus(3);
-        //peli.laivanAsetus(3);
-        //peli.laivanAsetus(4);
-        //peli.laivanAsetus(5);
+        Laivanupotus peli = new Laivanupotus(10, 10);
+        peli.kaynnistys();
+        peli.paljastaKentta();
     }
 }

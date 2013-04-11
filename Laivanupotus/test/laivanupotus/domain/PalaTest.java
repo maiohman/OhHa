@@ -15,9 +15,9 @@ import static org.junit.Assert.*;
  *
  * @author mohman
  */
-public class PalanKoordinaattiYTest {
+public class PalaTest {
     
-    public PalanKoordinaattiYTest() {
+    public PalaTest() {
     }
     
     @BeforeClass
@@ -39,8 +39,20 @@ public class PalanKoordinaattiYTest {
     // The methods must be annotated with annotation @Test. For example:
     //
     @Test
-    public void uudenPalanTila() {
+    public void uudenPalanKoordinaattiX() {
+        Pala x1y1 = new Pala(1, 1);
+        assertTrue(x1y1.getPalanKoordinaattiX() == 1);
+    }
+    
+    @Test
+    public void uudenPalanKoordinaattiY() {
         Pala x1y1 = new Pala(1, 1);
         assertTrue(x1y1.getPalanKoordinaattiY() == 1);
+    }
+    
+    @Test
+    public void uudenPalanTila() {
+        Pala x1y1 = new Pala(1, 1);
+        assertTrue(x1y1.getPalanTila() == true);
     }
 }

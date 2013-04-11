@@ -5,33 +5,37 @@
 
 ---------------------------------------------------------------------------
 
-12.3.2013   2h
-14-16 
+12.3.2013 2h
+14-16
 Tunnin jälkeen jäin tekemään viikon viikkotehtäviä. Poistuin paikalta noin klo 16.
 
 
 17.3
-14-15:45 
+14-15:45
 Omalle koneelle java projectin lataus, kertailua, ohjelmointia (luokat Lauivanupotus ja Pala)
 
-21:50-23:45 
-Tajuan tehneeni väärin. En ole jatkanut vanhaa projektia vaan luonut uuden. Yritän asentaa omalle koneelleni GitHubia. Joudun raivaamaan tilaa ohjelmalle. 
+21:50-23:45
+Tajuan tehneeni väärin. En ole jatkanut vanhaa projektia vaan luonut uuden. Yritän asentaa omalle koneelleni GitHubia.
+Joudun raivaamaan tilaa ohjelmalle.
 Asensin ohjelmaa... Asiat eivät menneet niin kuin ohjeissa.
 
 
 18.3
-9:30-10:15 
+9:30-10:15
 Luokkakaavion tekoa, skannaus.
 
 
 19.3
 14:45-16:55
-Pajassa. Kertailin. Onnistuin lisäämään Dokumentointi kansion ja poistamaan vanhat tuntikirjanpito ja aihemäärittely tiedostot väärästä paikkaa. 
+Pajassa. Kertailin. Onnistuin lisäämään Dokumentointi kansion ja poistamaan vanhat tuntikirjanpito ja
+aihemäärittely tiedostot väärästä paikkaa.
 Aloitin deadline 2 tehtävien tekemisen. Ohjelmointi tuntuu hankalalta pienen tauon jälkeen.
 
 18:15-21:45
-Taistelin git yhteyden saamista omalle koneelle. Git Bashia kun ei ollut, oletin, että Git Shell on vastaava. Ohjeet ovat rasittavan sekavat. Lopulta kuitenkin onnistuin.
-Mietin kuinka saisin ohjelman toimimaan. Kertailin Testien tekemistä. Testejä oli kuitenkin vaikea tehdä vielä tässä vaiheessa.
+Taistelin git yhteyden saamista omalle koneelle. Git Bashia kun ei ollut, oletin, että Git Shell on vastaava.
+Ohjeet ovat rasittavan sekavat. Lopulta kuitenkin onnistuin.
+Mietin kuinka saisin ohjelman toimimaan. Kertailin Testien tekemistä.
+Testejä oli kuitenkin vaikea tehdä vielä tässä vaiheessa.
 
 
 25.3
@@ -39,5 +43,33 @@ Mietin kuinka saisin ohjelman toimimaan. Kertailin Testien tekemistä. Testejä 
 Mietin pelin ominaisuuksia. Ohjelmoin lisää.
 
 26.3
+11:50-13:10
+ohjelmointia
+
 15:30-22:00
-Ohjelmointia, testien tekemistä, pohdintaa. Ongelmia GitHubin kanssa. En osaa käyttää add komentoa, enkä siten pysty lisäämään uusia testejä tänne näkyviin.
+Ohjelmointia, testien tekemistä, pohdintaa. Ongelmia GitHubin kanssa.
+En osaa käyttää add komentoa, enkä siten pysty lisäämään uusia testejä tänne näkyviin.
+
+22:50-22:55
+Sain lisättyä uudet tiedostot tänne nettiin.
+
+9.4
+9:10 - 13:05
+Asensin uusimman netbeansin pöytätietokoneelleni siinä toivossa, että nykyinen ohjelmani toimisi sillä versiolla.
+Ongelmana on ollut built.xml kun olen koittanut käynnistää laivanupotus peliäni.
+
+Tämän jälkeen yritin asentaa githubia pöytätietokoneelleni, ei onnistunut.
+GitShell ei tunne komentoa ssh-keygen. Enkä löytänyt mitään ratkaisua tähän.
+
+13:45 - 19:20
+Asensin uusimman netbeansin myös kannettavalleni kokeillakseni toimiiko ohjelma siinä.
+
+Jotain vikaa netbeans havaitsikin ohjelmassani ja tarjosi "resolve" mahdollisuutta.
+Nyt ohjelma toimii, mikä helpottaakin työskentelyä.
+
+Jatkan työskentelyä kannettavalla, jolla on jo yhteys Githubiin.
+Parantelen ohjelmaa, lisään toiminnallisuutta, teen lisää testejä.
+
+20:00-22:00
+Jatkoin työtä, tutustuin JavaDociin. Taas hankaluuksia saada uusi materiaali nettiin.
+Git add Laivanupotus, git commit -m "viides muokkaus", git push - ei vain toimi tai ei päivity samantien.

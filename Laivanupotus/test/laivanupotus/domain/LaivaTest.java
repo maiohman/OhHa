@@ -15,9 +15,9 @@ import static org.junit.Assert.*;
  *
  * @author mohman
  */
-public class LaivanEkaKoordinaattiXTest {
+public class LaivaTest {
     
-    public LaivanEkaKoordinaattiXTest() {
+    public LaivaTest() {
     }
     
     @BeforeClass
@@ -40,7 +40,21 @@ public class LaivanEkaKoordinaattiXTest {
     //
     @Test
     public void uudenLaivanEkaKoordinaattiX() {
-        Laiva laivaII = new Laiva(2, 1, 1);
+        Laiva laivaII = new Laiva(2);
+        laivaII.setLaivanAlkuKoordinaatit(1, 4, 2);
         assertTrue(laivaII.getLaivanEkaKoordinaattiX() == 1);
+    }
+    
+    @Test
+    public void uudenLaivanEkaKoordinaattiY() {
+        Laiva laivaII = new Laiva(2);
+        laivaII.setLaivanAlkuKoordinaatit(1, 4, 2);
+        assertTrue(laivaII.getLaivanEkaKoordinaattiY() == 4);
+    }
+    
+    @Test
+    public void uudenLaivanPituus() {
+        Laiva laivaII = new Laiva(3);
+        assertTrue(laivaII.getLaivanPituus() == 3);
     }
 }
