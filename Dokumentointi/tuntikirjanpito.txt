@@ -79,3 +79,27 @@ Koitin vielä päivittää tiedostojani kuitenkin ilman mitään tulosta.
 11.4
 10min
 Sain selvitettyä miksi en pystynyt päivittämään tiedostojani nettiin.
+
+13.4
+13:50-19:00
+Jatkan työtä. Selvitän asioita graafisen käyttöliittymän tekemisestä ja sovellan oppimaani työhöni.
+
+20:40-02:35
+Grafiikan harjoittelua.
+
+14.4
+12:20-14:00
+Ulkomuodon suunnittelua.
+
+17:05-19:05
+Tein koodikatselmus tehtävää.
+
+21:40-21:45
+Palautin palautteeni issue:na.
+
+16.4
+11:15-11:30
+Siistin koodia.
+
+20:00-22:00
+Koitin saada deadlinen vaatimia asioita kasaan.

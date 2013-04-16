@@ -20,14 +20,23 @@ public class Kentta {
         this.y = y;
     }
     
+    /*
+     * Antaa kentän leveyden.
+     */
     public int getLeveys() {
         return this.x;
     }
     
+    /*
+     * Antaa kentän korkeuden.
+     */
     public int getKorkeus() {
         return this.y;
     }
     
+    /*
+     * Paljastaa koko kentän ja sen missä laivat sijaitsevat.
+     */
     public void paljastaKentta() {
         for (int i = 0; i < this.x; i ++) {
             System.out.println("");
@@ -38,6 +47,9 @@ public class Kentta {
         System.out.println("");
     }
     
+    /*
+     * Kertoo onko pala vapaa laivalle.
+     */
     public boolean onkoVapaaPala(int x, int y) {
         if(x > 9) {
             System.out.println("Ulkona kentältä. x on " + x);
@@ -63,6 +75,9 @@ public class Kentta {
         }
     }
     
+    /*
+     * Asettaa laivan palan kentälle.
+     */
     public void setLaiva(int x, int y) {
         kentta[x][y] = true;
     }

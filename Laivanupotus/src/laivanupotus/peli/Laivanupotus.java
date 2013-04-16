@@ -34,11 +34,11 @@ public class Laivanupotus {
         this.laiva5 = new Laiva(5);
     }
     
-    public void kaynnistys() {
-        //luo pelaajan        
-        Pelaaja anna = new Pelaaja("Anna");
-        System.out.println(anna.getNimi());
-        //ohjelma arpoo laivojen paikat
+    /**
+     * Asettaa laivat.
+     * Asettaa kaikki laivat paikoilleen kentälle arpomalla.
+     */
+    public void asetaLaivat() {
         laivanAsetus(laiva2);
         System.out.println(laiva2.getLaivanEkaKoordinaattiX());
         System.out.println(laiva2.getLaivanEkaKoordinaattiY());
@@ -54,10 +54,12 @@ public class Laivanupotus {
         laivanAsetus(laiva5);
         System.out.println(laiva5.getLaivanEkaKoordinaattiX());
         System.out.println(laiva5.getLaivanEkaKoordinaattiY());
-        //pelaaja arvaa
-        //
     }
     
+    /**
+     * Minkä tahanta pituisen laivan asetus.
+     * Tulen muuttamaan koodihirmua.
+     */
     public void laivanAsetus(Laiva laiva) {
         leveys = leveys - 1;
         korkeus = korkeus - 1;
@@ -595,14 +597,23 @@ public class Laivanupotus {
         }
     }
     
+    /*
+     * Paljastaa mitä kentällä on.
+     */
     public void paljastaKentta() {
         kentta.paljastaKentta();
     }
     
+    /*
+     * Palauttaa kentän leveyden.
+     */
     public int getLeveys() {
         return this.leveys;
     }
     
+    /*
+     * Palauttaa kentän Kkorkeuden.
+     */
     public int getKorkeus() {
         return this.korkeus;
     }
