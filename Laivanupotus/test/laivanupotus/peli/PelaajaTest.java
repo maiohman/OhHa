@@ -15,9 +15,9 @@ import static org.junit.Assert.*;
  *
  * @author mohman
  */
-public class PelaajanlisaysTest {
+public class PelaajaTest {
     
-    public PelaajanlisaysTest() {
+    public PelaajaTest() {
     }
     
     @BeforeClass
@@ -39,7 +39,7 @@ public class PelaajanlisaysTest {
     // The methods must be annotated with annotation @Test. For example:
     //
     @Test
-    public void uusiPelaaja() {
+    public void uudenPelaajanNimi() {
         Pelaaja anna = new Pelaaja("Anna");
         assertTrue(anna.getNimi().equals("Anna"));
     }
