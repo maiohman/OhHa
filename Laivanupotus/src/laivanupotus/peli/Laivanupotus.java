@@ -1,15 +1,15 @@
 package laivanupotus.peli;
 
+import java.util.ArrayList;
 import java.util.Random;
 import laivanupotus.domain.Kentta;
 import laivanupotus.domain.Laiva;
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 
 /**
+ * Laivanupotus.
+ * Asettaa laivat kentälle.
  *
  * @author maiohman
  */
@@ -17,21 +17,21 @@ public class Laivanupotus {
     private int leveys;
     private int korkeus;
     private Kentta kentta;
-    private Laiva laiva2;
-    private Laiva laiva3a;
-    private Laiva laiva3b;
-    private Laiva laiva4;
-    private Laiva laiva5;
+    private ArrayList<Laiva> laivaLista;
     
     public Laivanupotus(int leveys, int korkeus) {
         this.leveys = leveys;
         this.korkeus = korkeus;
         this.kentta = new Kentta(leveys, korkeus);
-        this.laiva2 = new Laiva(2);
-        this.laiva3a = new Laiva(3);
-        this.laiva3b = new Laiva(3);
-        this.laiva4 = new Laiva(4);
-        this.laiva5 = new Laiva(5);
+        this.laivaLista = new ArrayList<Laiva>();
+    }
+    
+    public void luoLaivat() {
+        this.laivaLista.add(new Laiva(2));
+        this.laivaLista.add(new Laiva(3));
+        this.laivaLista.add(new Laiva(3));
+        this.laivaLista.add(new Laiva(4));
+        this.laivaLista.add(new Laiva(5));
     }
     
     /**
@@ -39,21 +39,11 @@ public class Laivanupotus {
      * Asettaa kaikki laivat paikoilleen kentälle arpomalla.
      */
     public void asetaLaivat() {
-        laivanAsetus(laiva2);
-        System.out.println(laiva2.getLaivanEkaKoordinaattiX());
-        System.out.println(laiva2.getLaivanEkaKoordinaattiY());
-        laivanAsetus(laiva3a);
-        System.out.println(laiva3a.getLaivanEkaKoordinaattiX());
-        System.out.println(laiva3a.getLaivanEkaKoordinaattiY());
-        laivanAsetus(laiva3b);
-        System.out.println(laiva3b.getLaivanEkaKoordinaattiX());
-        System.out.println(laiva3b.getLaivanEkaKoordinaattiY());
-        laivanAsetus(laiva4);
-        System.out.println(laiva4.getLaivanEkaKoordinaattiX());
-        System.out.println(laiva4.getLaivanEkaKoordinaattiY());
-        laivanAsetus(laiva5);
-        System.out.println(laiva5.getLaivanEkaKoordinaattiX());
-        System.out.println(laiva5.getLaivanEkaKoordinaattiY());
+        for (Laiva laiva : laivaLista) {
+            laivanAsetus(laiva);
+            System.out.println(laiva.getLaivanEkaKoordinaattiX());
+            System.out.println(laiva.getLaivanEkaKoordinaattiY());
+        }
     }
     
     /**
@@ -61,8 +51,8 @@ public class Laivanupotus {
      * Tulen muuttamaan koodihirmua.
      */
     public void laivanAsetus(Laiva laiva) {
-        leveys = leveys - 1;
-        korkeus = korkeus - 1;
+        leveys = leveys - 1; //9
+        korkeus = korkeus - 1; //9
         int pituus = laiva.getLaivanPituus();
         for (int onnistui = 0; onnistui < 1; onnistui++) {
             int suunta = 1 + new Random().nextInt(4);
@@ -604,6 +594,10 @@ public class Laivanupotus {
         kentta.paljastaKentta();
     }
     
+    public boolean onkoVapaaPala(int x, int y) {
+        return kentta.onkoVapaaPala(x, y);
+    }
+    
     /*
      * Palauttaa kentän leveyden.
      */
@@ -617,4 +611,5 @@ public class Laivanupotus {
     public int getKorkeus() {
         return this.korkeus;
     }
+    
 }

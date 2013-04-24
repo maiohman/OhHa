@@ -1,35 +1,38 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package laivanupotus.gui;
 
-import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileWriter;
 import javax.swing.JTextField;
 import laivanupotus.peli.Pelaaja;
 
 /**
- *
+ * Pelaajan lisäys kuuntelija.
+ * Lisää pelaajan nimen pelaajavarastoon.
+ * 
  * @author mohman
  */
 public class PelaajanLisaysKuuntelija implements ActionListener {
     private PelaajaVarasto pelaajaVarasto;
-    private JTextField nikkiKentta;
-    //private Component component;
+    private JTextField nimiKentta;
 
-    public PelaajanLisaysKuuntelija(PelaajaVarasto pelaajaVarasto, JTextField nikkiKentta, Component component) {
+    public PelaajanLisaysKuuntelija(PelaajaVarasto pelaajaVarasto, JTextField nimiKentta) {
         this.pelaajaVarasto = pelaajaVarasto;
-        this.nikkiKentta = nikkiKentta;
-        //this.component = component;
+        this.nimiKentta = nimiKentta;
     }
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        Pelaaja pelaaja = new Pelaaja(nikkiKentta.getText());
+        Pelaaja pelaaja = new Pelaaja(nimiKentta.getText());
         this.pelaajaVarasto.talleta(pelaaja);
-        //component.repaint();
+        
+        
     }
     
+    public void kirjoitaTiedostoon(String tulokset) throws Exception {
+        FileWriter kirjoittaja = new FileWriter("highscore.txt");
+        kirjoittaja.write(tulokset);
+        kirjoittaja.close();
+    }
 }

@@ -1,32 +1,37 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package laivanupotus.gui;
 
 import java.awt.Color;
-import java.awt.Component;
 import java.awt.Graphics;
+import java.util.ArrayList;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
 
 /**
- *
+ * Piirtoalusta edustaa pelin pelialustaa.
+ * Piirtoalustalla on ruudukko sekä ruudukon sivuilla x ja y koordinaatit.
+ * Pelatessa ruudukkoon ilmestyy rukseja kun ammus menee huti
+ * ja palloja kun ammus osuu.
+ * 
  * @author mohman
  */
 public class Piirtoalusta extends JPanel{
-    private JTextField x;
-    private JTextField y;
-    private Ruksi ruksi;
+    private ArrayList<Ruksi> ruksiLista;
+    private ArrayList<Pallo> palloLista;
         
-    
-    public Piirtoalusta(JTextField x, JTextField y, Ruksi ruksi) {
+    /*
+     * Luo piirtoalustan jonka taustaväri on valkoinen.
+     */
+    public Piirtoalusta() {
         super.setBackground(Color.WHITE);
-        this.x = x;
-        this.y = y;
-        this.ruksi = ruksi;
+        this.ruksiLista = new ArrayList<Ruksi>();
+        this.palloLista = new ArrayList<Pallo>();
     }
 
+    /*
+     * Piirtää alustalle kirjaimet, sitten numerot,
+     * ruudukon ulkoreunat, vaakaviivat ja pystyviivat,
+     * lopuksi ruksit ja pallot.
+     */
     @Override
     protected void paintComponent(Graphics graphics) {
         super.paintComponent(graphics);
@@ -76,5 +81,38 @@ public class Piirtoalusta extends JPanel{
         graphics.drawLine(240, 10, 240, 310);
         graphics.drawLine(270, 10, 270, 310);
         graphics.drawLine(300, 10, 300, 310);
+        
+        // 83 ruksia 10x10 pelialustassa
+        for (int i = 0; i < 83 ; i++) {
+            ruksiLista.add(new Ruksi());
+        }
+        
+        for (Ruksi ruksi : ruksiLista) {
+            ruksi.piirra(graphics);
+        }
+        
+        // 17 palloa kun laivoja on 1x5, 1x4, 2x3, 1x2 sijoitettuna pelialustalle
+        for (int i = 0; i < 17 ; i++) {
+            palloLista.add(new Pallo());
+        }
+        
+        for (Pallo pallo : palloLista) {
+            pallo.piirra(graphics);
+        }
+        
+    }
+    
+    /*
+     * Palauttaa tietyn ruksin ruksilistalta.
+     */
+    public Ruksi getRuksi(int i) {
+        return ruksiLista.get(i);
+    }
+    
+    /*
+     * Palauttaa tietyn pallon pallolistalta.
+     */
+    public Pallo getPallo(int i) {
+        return palloLista.get(i);
     }
 }

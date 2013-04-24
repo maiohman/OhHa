@@ -12,14 +12,14 @@ import laivanupotus.peli.Pelaaja;
  * @author mohman
  */
 public class PelaajaVarasto {
-    private HashMap pelaajaVarasto;
+    private HashMap<Pelaaja, Integer> pelaajaVarasto;
     
     public PelaajaVarasto() {
-        this.pelaajaVarasto = new HashMap();
+        this.pelaajaVarasto = new HashMap<Pelaaja, Integer>();
     }
 
     void talleta(Pelaaja pelaaja) {
-        pelaajaVarasto.put(pelaaja, pelaaja.getYritykset());
+        this.pelaajaVarasto.put(pelaaja, pelaaja.getYritykset());
     }
     
 }

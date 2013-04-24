@@ -25,14 +25,12 @@ import laivanupotus.peli.Laivanupotus;
 public class Kayttoliittyma implements Runnable {
     
     private JFrame frame;
-    private Laivanupotus peli;    
-    private int sivunPituus;
+    private Laivanupotus peli;
     private PelaajaVarasto pelaajaVarasto;
     private Laskuri laskuri;
     
-    public Kayttoliittyma(Laivanupotus peli, int sivunPituus, Laskuri laskuri, PelaajaVarasto pelaajaVarasto) {
+    public Kayttoliittyma(Laivanupotus peli, Laskuri laskuri, PelaajaVarasto pelaajaVarasto) {
         this.peli = peli;
-        this.sivunPituus = sivunPituus;
         this.laskuri = laskuri;
         this.pelaajaVarasto = pelaajaVarasto;
     }
@@ -40,8 +38,8 @@ public class Kayttoliittyma implements Runnable {
     @Override
     public void run() {
         frame = new JFrame("Laivanupotus");
-        int leveys = (peli.getLeveys())*sivunPituus+320;
-        int korkeus = (peli.getKorkeus())*sivunPituus+430;
+        int leveys = (peli.getLeveys())*30*2 + 60;
+        int korkeus = (peli.getKorkeus())*30*2 + 230;
          
         frame.setPreferredSize(new Dimension(leveys, korkeus));
  
@@ -57,23 +55,22 @@ public class Kayttoliittyma implements Runnable {
         
         
         NimiPanel nimiPanel = new NimiPanel();
-        PelaajanLisaysKuuntelija pKuuntelija = new PelaajanLisaysKuuntelija(pelaajaVarasto, nimiPanel.getNimi(), nimiPanel);
-        nimiPanel.getNimi().addActionListener(pKuuntelija);
+        PelaajanLisaysKuuntelija pKuuntelija = new PelaajanLisaysKuuntelija(pelaajaVarasto, nimiPanel.getNimiKentta());
+        nimiPanel.getNimiKentta().addActionListener(pKuuntelija);
         
-        KoordinaattiPanel koordinaattiPanel = new KoordinaattiPanel();
+        AmpumisPanel ampumisPanel = new AmpumisPanel();
         
-        Ruksi ruksi = new Ruksi(koordinaattiPanel.getKoordinaattiX(), koordinaattiPanel.getKoordinaattiY());
-        Piirtoalusta piirtoalusta = new Piirtoalusta(koordinaattiPanel.getKoordinaattiX(), koordinaattiPanel.getKoordinaattiY(), ruksi);
+        Piirtoalusta piirtoalusta = new Piirtoalusta();
         
-        KlikkaustenKuuntelija kKuuntelija = new KlikkaustenKuuntelija(laskuri, koordinaattiPanel.getLuku());
-        koordinaattiPanel.getNappi().addActionListener(kKuuntelija);
-        koordinaattiPanel.getKoordinaattiX().addActionListener(kKuuntelija);
-        koordinaattiPanel.getKoordinaattiY().addActionListener(kKuuntelija);
+        AmpumisNapinKuuntelija kKuuntelija = new AmpumisNapinKuuntelija(laskuri, ampumisPanel.getKlikkaustenLuku(), piirtoalusta, ampumisPanel, peli);
+        ampumisPanel.getAmpumisNappi().addActionListener(kKuuntelija);
+        ampumisPanel.getKenttaX().addActionListener(kKuuntelija);
+        ampumisPanel.getKenttaY().addActionListener(kKuuntelija);
         
         
         container.add(piirtoalusta, BorderLayout.CENTER);
         container.add(nimiPanel, BorderLayout.NORTH);
-        container.add(koordinaattiPanel, BorderLayout.SOUTH);
+        container.add(ampumisPanel, BorderLayout.SOUTH);
         
     }
     

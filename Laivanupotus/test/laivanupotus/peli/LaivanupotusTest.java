@@ -4,6 +4,7 @@
  */
 package laivanupotus.peli;
 
+import laivanupotus.domain.Laiva;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -15,13 +16,18 @@ import static org.junit.Assert.*;
  *
  * @author mohman
  */
-public class PelaajaTest {
+public class LaivanupotusTest {
+    private Laiva laiva2;
+    private Laivanupotus peli;
     
-    public PelaajaTest() {
+    public LaivanupotusTest() {
+        this.laiva2 = new Laiva(2);
+        this.peli = new Laivanupotus(10, 10);
     }
     
     @BeforeClass
     public static void setUpClass() {
+        
     }
     
     @AfterClass
@@ -36,9 +42,11 @@ public class PelaajaTest {
     public void tearDown() {
     }
     
+    
     @Test
-    public void uudenPelaajanNimi() {
-        Pelaaja anna = new Pelaaja("Anna");
-        assertTrue(anna.getNimi().equals("Anna"));
+    public void laivaAsettuuTietylleValille() {
+        peli.laivanAsetus(laiva2);
+        assertTrue(laiva2.getLaivanEkaKoordinaattiX() >= 0);
+        assertTrue(laiva2.getLaivanEkaKoordinaattiX() < 10);
     }
 }

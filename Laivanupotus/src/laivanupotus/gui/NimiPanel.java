@@ -1,38 +1,57 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package laivanupotus.gui;
 
 import java.awt.GridLayout;
-import java.util.Scanner;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 /**
+ * NimiPanel.
+ * Sisältää nimi-kyselyn (JLabel, JTextField, JButton)
+ * Sijoittuu ohjelmassa ylänurkkaan.
  *
  * @author mohman
  */
 public class NimiPanel extends JPanel {
-    private JTextField nimi;
-    //private Scanner lukija;
+    private JTextField nimiKentta;
+    private JLabel nimiLabel;
     
     public NimiPanel() {
-        super(new GridLayout(1, 3));
-        this.nimi = new JTextField();
-        //this.lukija = new Scanner(System.in);
+        super(new GridLayout(2, 3));
+        this.nimiKentta = new JTextField("");
+        this.nimiLabel = new JLabel("      Nimi: ");
         luoKomponentit();
     }
     
     private void luoKomponentit() {
-        add(new JLabel("      Nimi: "));
-        add(nimi);
+        add(nimiLabel);
+        add(nimiKentta);
         add(new JButton("OK"));
+        
+        add(new JLabel(""));
+        add(new JLabel(""));
+        add(new JLabel(""));
     }
     
-    public JTextField getNimi() {
-        return this.nimi;
+    public void setNimi(String nimi) {
+        this.nimiKentta = new JTextField(nimi);
+    }
+    
+    public String getNimi() {
+        return this.nimiKentta.toString();
+    }
+    
+    public JTextField getNimiKentta() {
+        return this.nimiKentta;
+    }
+    
+    public void setNimiLabel() {
+        this.nimiLabel = new JLabel("Hei " + getNimi());
+    }
+    
+    public JLabel getNimiLabel() {
+        return this.nimiLabel;
     }
 }

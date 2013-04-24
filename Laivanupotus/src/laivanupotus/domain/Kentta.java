@@ -1,11 +1,9 @@
 package laivanupotus.domain;
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
+ * Kenttä edustaa pelialustaa johon laivat asetetaan.
+ * Kenttä on kaksiulotteinen totuusarvo taulukko jonka jokainen arvo on 
+ * luotaessa false. Pelissä false edustaa 
  *
  * @author maiohman
  */
@@ -49,6 +47,8 @@ public class Kentta {
     
     /*
      * Kertoo onko pala vapaa laivalle.
+     * Jos pala on false se on tyhjä
+     * ja jos pala on true siinä on jo laivanpala.
      */
     public boolean onkoVapaaPala(int x, int y) {
         if(x > 9) {

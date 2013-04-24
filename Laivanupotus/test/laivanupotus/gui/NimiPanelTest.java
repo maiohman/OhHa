@@ -2,8 +2,10 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package laivanupotus.peli;
+package laivanupotus.gui;
 
+import laivanupotus.gui.NimiPanel;
+import javax.swing.JTextField;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -15,9 +17,9 @@ import static org.junit.Assert.*;
  *
  * @author mohman
  */
-public class PelaajaTest {
+public class NimiPanelTest {
     
-    public PelaajaTest() {
+    public NimiPanelTest() {
     }
     
     @BeforeClass
@@ -37,8 +39,10 @@ public class PelaajaTest {
     }
     
     @Test
-    public void uudenPelaajanNimi() {
-        Pelaaja anna = new Pelaaja("Anna");
-        assertTrue(anna.getNimi().equals("Anna"));
+    public void nimiPanelinNimi() {
+        NimiPanel nimiPanel = new NimiPanel();
+        nimiPanel.setNimi("Anna");
+        System.out.println(nimiPanel.getName());
+        assertTrue(nimiPanel.getName().equals("Anna"));
     }
 }
