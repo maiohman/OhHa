@@ -62,7 +62,7 @@ public class AmpumisNapinKuuntelija implements ActionListener {
         
         if(peliLoppu() == true) {
             this.ampumisPanel.setOpasTeksti("   Peli loppui!");
-            this.nimiPanel.setTervehdysLabel("Kirjoita nimesi");
+            this.nimiPanel.setInfo1Label("Kirjoita nimesi");
             this.nimiPanel.luoKomponentit();
         }
         
@@ -83,7 +83,7 @@ public class AmpumisNapinKuuntelija implements ActionListener {
     }
     
     public boolean peliLoppu() {
-        if(this.palloLuku == 2) {
+        if(this.palloLuku == 17) {
             return true;
         }
         else {

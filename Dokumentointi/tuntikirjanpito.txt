@@ -103,3 +103,6 @@ Siistin koodia.
 
 20:00-22:00
 Koitin saada deadlinen vaatimia asioita kasaan.
+
+monta monta tuntia lisää
+Sain ohjelman toimimaan pääpiisteittäin. Ohjelmalla on jonkinlainen loppu. Highscore tekstitiedosto ei toimi. Ruudukkoa ei voi ottaa kuin 10x10 kokoisena.

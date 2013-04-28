@@ -16,13 +16,17 @@ import javax.swing.JTextField;
  */
 public class NimiPanel extends JPanel {
     private JTextField nimiKentta;
-    private JLabel tervehdysLabel;
+    private JLabel info1Label;
+    private JLabel info2Label;
+    private JLabel info3Label;
     private JButton ok;
     
     public NimiPanel() {
         super(new GridLayout(2, 3));
         this.nimiKentta = new JTextField("");
-        this.tervehdysLabel = new JLabel("");
+        this.info1Label = new JLabel("");
+        this.info2Label = new JLabel("");
+        this.info3Label = new JLabel("");
         this.ok = new JButton("OK");
         //luoKomponentit();
     }
@@ -32,9 +36,9 @@ public class NimiPanel extends JPanel {
         add(nimiKentta);
         add(ok);
         
-        add(new JLabel(""));
-        add(tervehdysLabel);
-        add(new JLabel(""));
+        add(info1Label);
+        add(info2Label);
+        add(info3Label);
     }
     
     /*
@@ -59,17 +63,24 @@ public class NimiPanel extends JPanel {
     }
     
     /*
-     * Asettaa tervehdystekstin.
+     * Asettaa info tekstiä info 1 kohdalle.
      */
-    public void setTervehdysLabel(String teksti) {
-        this.tervehdysLabel.setText(teksti);
+    public void setInfo1Label(String teksti) {
+        info1Label.setText(teksti);
     }
     
     /*
-     * Palauttaa tervehdystekstin.
+     * Asettaa info tekstiä info 2 kohdalle.
      */
-    public JLabel getTervehdysLabel() {
-        return this.tervehdysLabel;
+    public void setInfo2Label(String teksti) {
+        info2Label.setText(teksti);
+    }
+    
+    /*
+     * Asettaa info tekstiä info 3 kohdalle.
+     */
+    public void setInfo3Label(String teksti) {
+        info3Label.setText(teksti);
     }
     
     /*
