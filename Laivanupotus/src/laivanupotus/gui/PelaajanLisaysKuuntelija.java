@@ -4,30 +4,38 @@ package laivanupotus.gui;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileWriter;
-import javax.swing.JTextField;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import laivanupotus.peli.Pelaaja;
 
 /**
- * Pelaajan lisäys kuuntelija.
- * Lisää pelaajan nimen pelaajavarastoon.
+ * PelaajanLisaysKuuntelija.
+ * Lisää pelaajan nimen ja tuloksen tekstitiedostoon.
  * 
  * @author mohman
  */
 public class PelaajanLisaysKuuntelija implements ActionListener {
-    private PelaajaVarasto pelaajaVarasto;
-    private JTextField nimiKentta;
+    //private PelaajaVarasto pelaajaVarasto;
+    private NimiPanel nimiPanel;
+    private AmpumisNapinKuuntelija ampumisNapinKuuntelija;
 
-    public PelaajanLisaysKuuntelija(PelaajaVarasto pelaajaVarasto, JTextField nimiKentta) {
-        this.pelaajaVarasto = pelaajaVarasto;
-        this.nimiKentta = nimiKentta;
+    public PelaajanLisaysKuuntelija(NimiPanel nimiPanel, AmpumisNapinKuuntelija ampumisNapinKuuntelija) {
+        //this.pelaajaVarasto = pelaajaVarasto;
+        this.nimiPanel = nimiPanel;
+        this.ampumisNapinKuuntelija = ampumisNapinKuuntelija;
     }
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        Pelaaja pelaaja = new Pelaaja(nimiKentta.getText());
-        this.pelaajaVarasto.talleta(pelaaja);
+        //Pelaaja pelaaja = new Pelaaja(nimiKentta.getText());
+        //this.pelaajaVarasto.talleta(pelaaja);
+        try {
+            kirjoitaTiedostoon(nimiPanel.getNimiKentta().getText() + ", " + this.ampumisNapinKuuntelija.getYritysKerrat());
+        } catch (Exception ex) {
+            Logger.getLogger(PelaajanLisaysKuuntelija.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
-        
+        this.nimiPanel.setTervehdysLabel("Tuloksesi on lisätty!");
     }
     
     public void kirjoitaTiedostoon(String tulokset) throws Exception {

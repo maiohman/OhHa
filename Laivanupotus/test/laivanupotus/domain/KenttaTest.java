@@ -1,7 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package laivanupotus.domain;
 
 import org.junit.After;
@@ -35,31 +32,26 @@ public class KenttaTest {
     @After
     public void tearDown() {
     }
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
+    
     @Test
     public void kentanLeveys() {
         Kentta kentta = new Kentta(11, 11);
         assertTrue(kentta.getLeveys() == 11);
     }
     
-    @Test
     public void kentanKorkeus() {
         Kentta kentta = new Kentta(11, 11);
         assertTrue(kentta.getKorkeus() == 11);
     }
     
-    @Test
     public void kentanPalaVapaana() {
         Kentta kentta = new Kentta(11, 11);
         assertTrue(kentta.onkoVapaaPala(3, 3) == false);
     }
     
-    @Test
     public void kentanPalaVarattuna() {
         Kentta kentta = new Kentta(11, 11);
-        kentta.setLaiva(3, 3);
+        kentta.setLaivanPala(3, 3);
         assertTrue(kentta.onkoVapaaPala(3, 3) == true);
     }
 }

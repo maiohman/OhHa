@@ -1,7 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package laivanupotus.gui;
 
 import java.awt.GridLayout;
@@ -11,7 +8,9 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 /**
- *
+ * AmpumisPanel.
+ * 
+ * 
  * @author mohman
  */
 public class AmpumisPanel extends JPanel {
@@ -19,42 +18,49 @@ public class AmpumisPanel extends JPanel {
     private JButton ammu;
     private JTextField x;
     private JTextField y;
+    private JLabel opas;
     
     public AmpumisPanel() {
         super(new GridLayout(4, 3));
+        this.x = new JTextField();
+        this.y = new JTextField();
+        this.luku = new JLabel("0");
+        this.ammu = new JButton("Ammu!");
+        this.opas = new JLabel("   Aloita peli!");
         luoKomponentit();
     }
     
     private void luoKomponentit() {
         add(new JLabel(""));
-        add(new JLabel(""));
+        add(opas);
         add(new JLabel(""));
         
         add(new JLabel(""));
         add(new JLabel("Koordinaatti X: "));
-        this.x = new JTextField();
         add(x);
         
         add(new JLabel(""));
         add(new JLabel("Koordinaatti Y: "));
-        this.y = new JTextField();
         add(y);
         
         add(new JLabel("      Yritetty: "));
-        this.luku = new JLabel("0");
         add(luku);
-        this.ammu = new JButton("Ammu!");
         add(ammu);
     }
     
+    /*
+     * Palauttaa klikkausten lukumäätän.
+     */
     public JLabel getKlikkaustenLuku() {
         return this.luku;
     }
     
+    /*
+     * Palauttaa ampumis-napin.
+     */
     public JButton getAmpumisNappi() {
         return this.ammu;
     }
-    
     
     /**
      * Muuttaa annetun koordinaatin x numeroksi ja palauttaa sen
@@ -103,19 +109,38 @@ public class AmpumisPanel extends JPanel {
         }
     }
     
+    /*
+     * 
+     */
     public JTextField getKenttaX() {
         return this.x;
     }
     
+    /*
+     * 
+     */
     public JTextField getKenttaY() {
         return this.y;
     }
     
+    /*
+     * 
+     */
     public void setKenttaX(JTextField x) {
         this.x = x;
     }
     
+    /*
+     * 
+     */
     public void setKenttaY(JTextField y) {
         this.y = y;
+    }
+    
+    /*
+     * Asettaa uuden tekstin oppaalle.
+     */
+    public void setOpasTeksti(String teksti) {
+        this.opas.setText(teksti);
     }
 }

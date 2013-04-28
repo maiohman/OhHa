@@ -36,10 +36,10 @@ public class Kentta {
      * Paljastaa koko kentän ja sen missä laivat sijaitsevat.
      */
     public void paljastaKentta() {
-        for (int i = 0; i < this.x; i ++) {
+        for (int i = 0; i < this.y; i ++) {
             System.out.println("");
-            for (int j = 0; j < this.y; j ++) {
-                System.out.print(kentta[i][j] + " ");
+            for (int j = 0; j < this.x; j ++) {
+                System.out.print(kentta[j][i] + " ");
             }
         }
         System.out.println("");
@@ -52,19 +52,19 @@ public class Kentta {
      */
     public boolean onkoVapaaPala(int x, int y) {
         if(x > 9) {
-            System.out.println("Ulkona kentältä. x on " + x);
+            System.out.println("Ulkona kentältä, x on " + x);
             return false;
         }
         if(y > 9) {
-            System.out.println("Ulkona kentältä. y on " + y);
+            System.out.println("Ulkona kentältä, y on " + y);
             return false;
         }
         if(x < 0) {
-            System.out.println("Ulkona kentältä" + x);
+            System.out.println("Ulkona kentältä, x on " + x);
             return false;
         }
         if(y < 0) {
-            System.out.println("Ulkona kentältä" + y);
+            System.out.println("Ulkona kentältä, y on " + y);
             return false;
         }
         if(kentta[x][y] == false) {
@@ -78,7 +78,7 @@ public class Kentta {
     /*
      * Asettaa laivan palan kentälle.
      */
-    public void setLaiva(int x, int y) {
+    public void setLaivanPala(int x, int y) {
         kentta[x][y] = true;
     }
 }

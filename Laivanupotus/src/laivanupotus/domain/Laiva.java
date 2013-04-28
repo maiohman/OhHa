@@ -1,24 +1,24 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package laivanupotus.domain;
 
 import java.util.Random;
-import laivanupotus.peli.Laivanupotus;
+import laivanupotus.gui.Suunta;
 
 /**
+ * Laiva.
+ * Sisältää laivan tiedot (pituuden, alku koordinaatit sekä suunnan).
  *
  * @author maiohman
  */
 public class Laiva {
-    int pituus;
-    int y;
-    int x;
-    int suunta;
+    private int pituus;
+    private int y;
+    private int x;
+    private Suunta suunta;
 
     public Laiva(int pituus) {
         this.pituus = pituus;
+        this.suunta = Suunta.values()[new Random().nextInt(Suunta.values().length)];
     }
     
     /*
@@ -29,12 +29,18 @@ public class Laiva {
     }
     
     /*
+     * Palautta laivan pituuden.
+     */
+    public Suunta getLaivanSuunta() {
+        return this.suunta;
+    }
+    
+    /*
      * Asettaa laivan ensimmäiset koordinaatit sekä suunnan.
      */
-    public void setLaivanAlkuKoordinaatit(int x, int y, int suunta) { 
+    public void setLaivanAlkuKoordinaatit(int x, int y) { 
         this.x = x;
         this.y = y;
-        this.suunta = suunta;
     }
     
     /*

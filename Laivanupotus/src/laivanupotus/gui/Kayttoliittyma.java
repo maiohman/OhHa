@@ -52,26 +52,23 @@ public class Kayttoliittyma implements Runnable {
     }
     
     public void luoKomponentit(Container container) {
-        
-        
         NimiPanel nimiPanel = new NimiPanel();
-        PelaajanLisaysKuuntelija pKuuntelija = new PelaajanLisaysKuuntelija(pelaajaVarasto, nimiPanel.getNimiKentta());
-        nimiPanel.getNimiKentta().addActionListener(pKuuntelija);
-        
+        Piirtoalusta piirtoalusta = new Piirtoalusta(peli.getKentta());
         AmpumisPanel ampumisPanel = new AmpumisPanel();
         
-        Piirtoalusta piirtoalusta = new Piirtoalusta();
+        AmpumisNapinKuuntelija ampumisNapinKuuntelija = new AmpumisNapinKuuntelija(laskuri, ampumisPanel.getKlikkaustenLuku(), piirtoalusta, ampumisPanel, nimiPanel, peli);
+        PelaajanLisaysKuuntelija pKuuntelija = new PelaajanLisaysKuuntelija(nimiPanel, ampumisNapinKuuntelija);
         
-        AmpumisNapinKuuntelija kKuuntelija = new AmpumisNapinKuuntelija(laskuri, ampumisPanel.getKlikkaustenLuku(), piirtoalusta, ampumisPanel, peli);
-        ampumisPanel.getAmpumisNappi().addActionListener(kKuuntelija);
-        ampumisPanel.getKenttaX().addActionListener(kKuuntelija);
-        ampumisPanel.getKenttaY().addActionListener(kKuuntelija);
+        nimiPanel.getOkNappi().addActionListener(pKuuntelija);
+        nimiPanel.getNimiKentta().addActionListener(pKuuntelija);
+       
+        ampumisPanel.getAmpumisNappi().addActionListener(ampumisNapinKuuntelija);
+        ampumisPanel.getKenttaX().addActionListener(ampumisNapinKuuntelija);
+        ampumisPanel.getKenttaY().addActionListener(ampumisNapinKuuntelija);
         
-        
-        container.add(piirtoalusta, BorderLayout.CENTER);
         container.add(nimiPanel, BorderLayout.NORTH);
+        container.add(piirtoalusta, BorderLayout.CENTER);
         container.add(ampumisPanel, BorderLayout.SOUTH);
-        
     }
     
     public JFrame getFrame() {

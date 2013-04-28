@@ -4,6 +4,7 @@
  */
 package laivanupotus.domain;
 
+import laivanupotus.gui.Suunta;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -41,18 +42,18 @@ public class LaivaTest {
     @Test
     public void uudenLaivanEkaKoordinaattiX() {
         Laiva laivaII = new Laiva(2);
-        laivaII.setLaivanAlkuKoordinaatit(1, 4, 2);
+        Suunta suunta = laivaII.getLaivanSuunta();
+        laivaII.setLaivanAlkuKoordinaatit(1, 4);
         assertTrue(laivaII.getLaivanEkaKoordinaattiX() == 1);
     }
     
-    @Test
     public void uudenLaivanEkaKoordinaattiY() {
         Laiva laivaII = new Laiva(2);
-        laivaII.setLaivanAlkuKoordinaatit(1, 4, 2);
+        Suunta suunta = laivaII.getLaivanSuunta();
+        laivaII.setLaivanAlkuKoordinaatit(1, 4);
         assertTrue(laivaII.getLaivanEkaKoordinaattiY() == 4);
     }
     
-    @Test
     public void uudenLaivanPituus() {
         Laiva laivaII = new Laiva(3);
         assertTrue(laivaII.getLaivanPituus() == 3);

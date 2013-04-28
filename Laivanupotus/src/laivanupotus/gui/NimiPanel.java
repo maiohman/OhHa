@@ -16,42 +16,66 @@ import javax.swing.JTextField;
  */
 public class NimiPanel extends JPanel {
     private JTextField nimiKentta;
-    private JLabel nimiLabel;
+    private JLabel tervehdysLabel;
+    private JButton ok;
     
     public NimiPanel() {
         super(new GridLayout(2, 3));
         this.nimiKentta = new JTextField("");
-        this.nimiLabel = new JLabel("      Nimi: ");
-        luoKomponentit();
+        this.tervehdysLabel = new JLabel("");
+        this.ok = new JButton("OK");
+        //luoKomponentit();
     }
     
-    private void luoKomponentit() {
-        add(nimiLabel);
+    public void luoKomponentit() {
+        add(new JLabel("      Nimi: "));
         add(nimiKentta);
-        add(new JButton("OK"));
+        add(ok);
         
         add(new JLabel(""));
-        add(new JLabel(""));
+        add(tervehdysLabel);
         add(new JLabel(""));
     }
     
+    /*
+     * Asettaa nimen nimi-kenttään.
+     */
     public void setNimi(String nimi) {
         this.nimiKentta = new JTextField(nimi);
     }
     
+    /*
+     * Palauttaa nimi-kentässä olevan nimen Stringinä.
+     */
     public String getNimi() {
         return this.nimiKentta.toString();
     }
     
+    /*
+     * Palauttaa nimi-kentän JTextField:inä.
+     */
     public JTextField getNimiKentta() {
         return this.nimiKentta;
     }
     
-    public void setNimiLabel() {
-        this.nimiLabel = new JLabel("Hei " + getNimi());
+    /*
+     * Asettaa tervehdystekstin.
+     */
+    public void setTervehdysLabel(String teksti) {
+        this.tervehdysLabel.setText(teksti);
     }
     
-    public JLabel getNimiLabel() {
-        return this.nimiLabel;
+    /*
+     * Palauttaa tervehdystekstin.
+     */
+    public JLabel getTervehdysLabel() {
+        return this.tervehdysLabel;
+    }
+    
+    /*
+     * Palauttaa OK-napin.
+     */
+    public JButton getOkNappi() {
+        return this.ok;
     }
 }

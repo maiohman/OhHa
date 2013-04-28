@@ -5,6 +5,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.util.ArrayList;
 import javax.swing.JPanel;
+import laivanupotus.domain.Kentta;
 
 /**
  * Piirtoalusta edustaa pelin pelialustaa.
@@ -17,14 +18,16 @@ import javax.swing.JPanel;
 public class Piirtoalusta extends JPanel{
     private ArrayList<Ruksi> ruksiLista;
     private ArrayList<Pallo> palloLista;
+    private Kentta kentta;
         
     /*
      * Luo piirtoalustan jonka taustaväri on valkoinen.
      */
-    public Piirtoalusta() {
+    public Piirtoalusta(Kentta kentta) {
         super.setBackground(Color.WHITE);
         this.ruksiLista = new ArrayList<Ruksi>();
         this.palloLista = new ArrayList<Pallo>();
+        this.kentta = kentta;
     }
 
     /*
@@ -83,7 +86,7 @@ public class Piirtoalusta extends JPanel{
         graphics.drawLine(300, 10, 300, 310);
         
         // 83 ruksia 10x10 pelialustassa
-        for (int i = 0; i < 83 ; i++) {
+        for (int i = 0; i < kentta.getLeveys() * kentta.getKorkeus() - 17 ; i++) {
             ruksiLista.add(new Ruksi());
         }
         

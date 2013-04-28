@@ -3,7 +3,6 @@ import java.util.Scanner;
 import javax.swing.SwingUtilities;
 import laivanupotus.domain.Kentta;
 import laivanupotus.domain.Laiva;
-import laivanupotus.domain.Pala;
 import laivanupotus.gui.Kayttoliittyma;
 import laivanupotus.gui.Laskuri;
 import laivanupotus.gui.PelaajaVarasto;
@@ -31,6 +30,6 @@ public class Main {
         Kayttoliittyma kali = new Kayttoliittyma(peli, laskuri, pelaajaVarasto);
         SwingUtilities.invokeLater(kali);
         
-        //peli.paljastaKentta();
+        peli.paljastaKentta();
     }
 }
